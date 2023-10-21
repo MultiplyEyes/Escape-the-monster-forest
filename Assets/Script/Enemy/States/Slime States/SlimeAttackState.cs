@@ -8,8 +8,14 @@ public class SlimeAttackState : BaseState
     }
     public override void UpdateState(SlimeStateManager Slime)
     {
-        GameObject newArrow = MonoBehaviour.Instantiate(Slime.slimeProjectile, Slime.transform.position, Slime.transform.rotation);
-        newArrow.GetComponent<Rigidbody2D>().velocity = Slime.transform.right * Slime.slimeProjectileSpeed;
+        Vector2 diraction = Slime.player.transform.position - Slime.SlimeShootPoint.transform.position;
+        float angle = Mathf.Atan2(diraction.y, diraction.x) * Mathf.Rad2Deg;
+        Slime.SlimeShootPoint.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+
+        GameObject newArrow = MonoBehaviour.Instantiate(Slime.slimeProjectile, Slime.SlimeShootPoint.transform.position, Slime.SlimeShootPoint.transform.rotation);
+        newArrow.GetComponent<Rigidbody2D>().velocity = Slime.SlimeShootPoint.transform.right * Slime.slimeProjectileSpeed;
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Slime Projectile"), LayerMask.NameToLayer("Slime Mob"));
         Slime.SwitchState(Slime.RestingState);
     }
     public override void OnCollisionEnter(SlimeStateManager Slime)

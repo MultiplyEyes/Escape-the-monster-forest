@@ -11,6 +11,7 @@ public class SlimeStateManager : MonoBehaviour
     
 
     public GameObject slimeProjectile;
+    public GameObject SlimeShootPoint;
     public float slimeProjectileSpeed = 3f;
     public Transform player;
     public float distance, chassingRange, speed;
