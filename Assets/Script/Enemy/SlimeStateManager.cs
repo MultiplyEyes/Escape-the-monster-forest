@@ -9,7 +9,7 @@ public class SlimeStateManager : MonoBehaviour
     public SlimeChasingState ChasingState = new SlimeChasingState();
     public RestingState RestingState = new RestingState();
     
-
+    public bool redSlime, blueSlime;
     public GameObject slimeProjectile;
     public GameObject SlimeShootPoint;
     public float slimeProjectileSpeed = 3f;
