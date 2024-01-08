@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 3;
+    public int health = 7;
+    int maxHealth = 7;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,8 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            health = maxHealth;
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
