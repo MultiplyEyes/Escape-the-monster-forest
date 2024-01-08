@@ -5,8 +5,8 @@ using UnityEngine;
 public class SlimeChasingState : BaseState
 {
     Vector2 direction;
-    float chassingTime = 5;
-    float chassingDefaultTime = 5;
+    float chassingTime = 3;
+    float chassingDefaultTime = 3;
     public override void EnterState(SlimeStateManager Slime)
     {
         Debug.Log("Entering Chasing State");

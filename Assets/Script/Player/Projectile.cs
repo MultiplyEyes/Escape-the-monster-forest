@@ -16,6 +16,7 @@ public class Projectile : MonoBehaviour
     void Update()
     {
         Destroy(gameObject, 5);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Arrow"), LayerMask.NameToLayer("Water"));
 
     }
 

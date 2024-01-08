@@ -8,12 +8,15 @@ public class EnemyProjectile : MonoBehaviour
     void Start()
     {
         
+        //ignore layer water
     }
 
     // Update is called once per frame
     void Update()
     {
         Destroy(gameObject, 5);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Slime Projectile"), LayerMask.NameToLayer("Water"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Slime Projectile"), LayerMask.NameToLayer("Slime Projectile"));
 
     }
 
