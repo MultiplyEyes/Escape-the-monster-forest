@@ -8,13 +8,13 @@ public class BowControlls : MonoBehaviour
     public GameObject arrow;
     public float arrowSpeed = 20;
     public float adjustAngle = 0;
-
+    ArrowPouch arrowPouch;
     public float shootDelay = 1f;
     private float shootTime = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        arrowPouch = GetComponent<ArrowPouch>();
     }
 
     // Update is called once per frame
@@ -31,10 +31,11 @@ public class BowControlls : MonoBehaviour
 
         
 
-        if (Input.GetMouseButtonDown(0) && Time.time > shootTime)
+        if (Input.GetMouseButtonDown(0) && Time.time > shootTime && arrowPouch.arrowCount > 0)
         {
             Shoot();
             shootTime = Time.time + shootDelay;
+            arrowPouch.arrowCount--;
         }
 
         // float mousePosX = Input.mousePosition.x;
