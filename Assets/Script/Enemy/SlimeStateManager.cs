@@ -14,11 +14,12 @@ public class SlimeStateManager : MonoBehaviour
     public GameObject SlimeShootPoint;
     public float slimeProjectileSpeed = 3f;
     public Transform player;
+
     public float distance, chassingRange, speed;
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         CurrentState = IdleState;
         CurrentState.EnterState(this);
     }
@@ -26,6 +27,7 @@ public class SlimeStateManager : MonoBehaviour
     // Update is called once per frameW
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         CurrentState.UpdateState(this);
 
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -34,7 +36,7 @@ public class SlimeStateManager : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Every time you enter a new state you call the OnCollisionEnter method in the state class
-        CurrentState.OnCollisionEnter(this);
+        CurrentState.OnCollisionEnter(this, collision);
     }
 
     public void SwitchState(BaseState state)

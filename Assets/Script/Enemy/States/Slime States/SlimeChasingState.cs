@@ -9,7 +9,6 @@ public class SlimeChasingState : BaseState
     float chassingDefaultTime = 3;
     public override void EnterState(SlimeStateManager Slime)
     {
-        Debug.Log("Entering Chasing State");
     }
     public override void UpdateState(SlimeStateManager Slime)
     {
@@ -30,14 +29,12 @@ public class SlimeChasingState : BaseState
             Slime.SwitchState(Slime.AttackState);
         }
     }
-    public override void OnCollisionEnter(SlimeStateManager Slime)
+    public override void OnCollisionEnter(SlimeStateManager Slime, Collision2D collision)
     {
-        Debug.Log("Collision");
     }
     public override void ExitState(SlimeStateManager Slime)
     {
         chassingTime = chassingDefaultTime;
         Slime.rb.velocity = Vector2.zero;
-        Debug.Log("Exiting State");
     }
 }

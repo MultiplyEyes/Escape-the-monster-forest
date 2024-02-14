@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 3;
+
+    public GameObject blueSlime;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,16 @@ public class EnemyHealth : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            if(gameObject.tag == "Boss")
+            {
+                GameObject newEnemy = Instantiate(blueSlime, transform.position, transform.rotation);
+                Destroy(gameObject);
+                //debug.log("boss is dead new slime created");
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

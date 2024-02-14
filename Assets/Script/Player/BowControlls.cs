@@ -29,13 +29,12 @@ public class BowControlls : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle - adjustAngle, Vector3.forward);
 
-        
 
-        if (Input.GetMouseButtonDown(0) && Time.time > shootTime && arrowPouch.arrowCount > 0)
+        if (Input.GetMouseButtonUp(0) && arrowPouch.arrowCount > 0)
         {
             Shoot();
             shootTime = Time.time + shootDelay;
-            arrowPouch.arrowCount--;
+            
         }
 
         // float mousePosX = Input.mousePosition.x;

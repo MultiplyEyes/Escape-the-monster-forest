@@ -9,7 +9,7 @@ public class RestingState : BaseState
     // Start is called before the first frame update
 public override void EnterState(SlimeStateManager Slime)
     {
-        Debug.Log("Entering Resting State");
+        
     }
     public override void UpdateState(SlimeStateManager Slime)
     {
@@ -19,7 +19,7 @@ public override void EnterState(SlimeStateManager Slime)
             Slime.SwitchState(Slime.ChasingState);
         }
     }
-    public override void OnCollisionEnter(SlimeStateManager Slime)
+    public override void OnCollisionEnter(SlimeStateManager Slime, Collision2D collision)
     {
     }
     public override void ExitState(SlimeStateManager Slime)

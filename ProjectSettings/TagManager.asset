@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Red Slime
   - Blue Slime
+  - Boss
   layers:
   - Default
   - TransparentFX

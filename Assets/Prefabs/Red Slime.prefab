@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 1713721216922667716}
   - component: {fileID: 1713721216922667715}
   - component: {fileID: 1713721216922667714}
+  - component: {fileID: 4214241378452595585}
   m_Layer: 21
   m_Name: Red Slime
   m_TagString: Red Slime
@@ -240,7 +241,7 @@ MonoBehaviour:
     type: 3}
   SlimeShootPoint: {fileID: 1713721216100708808}
   slimeProjectileSpeed: 12
-  player: {fileID: 0}
+  player: {fileID: 7525716445865892800, guid: 220cb5f79a073624e8994d9a22881b2d, type: 3}
   distance: 200
   chassingRange: 30
   speed: 0.5
@@ -279,3 +280,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 6
+  blueSlime: {fileID: 0}
+--- !u!114 &4214241378452595585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713721216922667713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db282c414712b2b4bbbd70bbba398b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,7 +4,6 @@ public class SlimeIdleState : BaseState
 {
     public override void EnterState(SlimeStateManager Slime)
     {
-        Debug.Log("Entering Idle State");
     }
     public override void UpdateState(SlimeStateManager Slime)
     {
@@ -13,12 +12,11 @@ public class SlimeIdleState : BaseState
             Slime.SwitchState(Slime.ChasingState);
         }
     }
-    public override void OnCollisionEnter(SlimeStateManager Slime)
+    public override void OnCollisionEnter(SlimeStateManager Slime, Collision2D collision)
     {
-        Debug.Log("Collision");
     }
+
     public override void ExitState(SlimeStateManager Slime)
     {
-        Debug.Log("Exiting State");
     }
 }
