@@ -30,10 +30,10 @@ public class BowControlls : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle - adjustAngle, Vector3.forward);
 
 
-        if (Input.GetMouseButtonUp(0) && arrowPouch.arrowCount > 0)
+        if (Input.GetMouseButtonDown(0) && arrowPouch.arrowCount > 0)
         {
             Shoot();
-            shootTime = Time.time + shootDelay;
+            //shootTime = Time.time + shootDelay;
             
         }
 
@@ -54,5 +54,7 @@ public class BowControlls : MonoBehaviour
         GameObject newArrow = Instantiate(arrow, transform.position, transform.rotation);
         newArrow.GetComponent<Rigidbody2D>().velocity = transform.right * arrowSpeed;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Arrow"), LayerMask.NameToLayer("Player"));
+
+        arrowPouch.arrowCount--;
     }
 }
