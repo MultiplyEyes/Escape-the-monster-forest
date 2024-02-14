@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody2D playerRB;
+
+    public GameObject bow;
     
 
     private Vector2 direction;
@@ -36,5 +38,14 @@ public class PlayerMovement : MonoBehaviour
     void Move()
     {
         playerRB.velocity = new Vector2(direction.x * moveSpeed, direction.y * moveSpeed);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Pouch")
+        {
+            Destroy(collision.gameObject);
+            bow.GetComponent<ArrowPouch>().IncreaseArrowCount(8);
+        }
     }
 }

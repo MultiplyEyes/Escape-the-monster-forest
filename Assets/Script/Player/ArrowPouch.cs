@@ -19,4 +19,9 @@ public class ArrowPouch : MonoBehaviour
             Debug.Log("Out of arrows!");
         }
     }
+
+    public void IncreaseArrowCount(int amount)
+    {
+        arrowCount += amount;
+    }
 }
