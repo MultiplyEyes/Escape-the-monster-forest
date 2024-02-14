@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int health = 3;
 
     public GameObject blueSlime;
+    public GameObject arrowPouch;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         health -= damage;
         if(health <= 0)
         {
+            GameObject newArrow = Instantiate(arrowPouch, transform.position, transform.rotation);
             if(gameObject.tag == "Boss")
             {
                 GameObject newEnemy = Instantiate(blueSlime, transform.position, transform.rotation);

@@ -166,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   blueSlime: {fileID: 0}
+  arrowPouch: {fileID: 8951705995056068723, guid: 59680610b1f831c4bb4390e77c50cba9,
+    type: 3}
 --- !u!114 &8645987661141427682
 MonoBehaviour:
   m_ObjectHideFlags: 0

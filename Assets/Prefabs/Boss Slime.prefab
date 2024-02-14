@@ -281,3 +281,5 @@ MonoBehaviour:
   health: 2
   blueSlime: {fileID: 7995327739405434261, guid: e083ea213db08194db214e8bb2631092,
     type: 3}
+  arrowPouch: {fileID: 8951705995056068723, guid: 59680610b1f831c4bb4390e77c50cba9,
+    type: 3}
