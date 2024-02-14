@@ -5,6 +5,7 @@ using UnityEngine;
 public class ArrowPouch : MonoBehaviour
 {
     public int arrowCount = 5;
+    
     // Start is called before the first frame update
     void Start()
     {
