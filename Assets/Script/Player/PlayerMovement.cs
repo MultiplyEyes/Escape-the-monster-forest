@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Pouch")
         {
             Destroy(collision.gameObject);
-            bow.GetComponent<ArrowPouch>().IncreaseArrowCount(8);
+            bow.GetComponent<ArrowPouch>().IncreaseArrowCount(4);
         }
     }
 }
