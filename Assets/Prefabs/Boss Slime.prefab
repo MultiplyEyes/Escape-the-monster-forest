@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1776ce0ef62780847be09c59ac04088b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 8
   blueSlime: {fileID: 7995327739405434261, guid: e083ea213db08194db214e8bb2631092,
     type: 3}
   arrowPouch: {fileID: 8951705995056068723, guid: 59680610b1f831c4bb4390e77c50cba9,

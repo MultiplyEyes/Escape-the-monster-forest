@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8645987661141427689}
   - component: {fileID: 8645987661141427688}
   - component: {fileID: 8645987661141427682}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: Red Slime
   m_TagString: Red Slime
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8645987661655057587}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8645987662348594231}
   - component: {fileID: 8645987662348594228}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: RedSlime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
